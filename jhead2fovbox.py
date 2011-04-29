@@ -15,7 +15,7 @@ DEBUG = False
 def debug(txt):
     global DEBUG
     if DEBUG:
-        print repr(txt)
+        print "%s" % txt
 
 class JheadParser:
     """Data class for storing Jhead output. This will be put into SwathViewer
@@ -75,7 +75,7 @@ class JheadParser:
             raise SystemExit
         
         txt = "%s\n" % (self.Filename)
-        txt += commands.getoutput('fovbox.py --lon %.8f --lat %.8f --alt %s --fovx 25.8 --fovy 14.96' %\
+        txt += commands.getoutput('fovbox.py --lon %.8f --lat %.8f --alt %s --fovx 25.55 --fovy 17.13' %\
                                   (self.GPSLongitude,
                                    self.GPSLatitude,
                                    self.GPSAltitude))

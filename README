@@ -1,0 +1,12 @@
+first:
+
+$ cd /path/to/images
+$ jhead -v *.jpg > /path/to/jhead2fovbox/headers.txt
+
+then:
+
+$ cd /path/to/jhead2fovbox
+$ python jhead2fovbox.py headers.txt
+fovbox_info.txt file is now in current working directory, containing output
+
+~end~
